@@ -1,0 +1,174 @@
+.header {
+	position: relative;
+	background: #ffffff;
+	width: 100%;
+	min-width: 315px;
+	margin-top: -10px;
+}
+
+.my-name {
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    background: #4aaaa5;
+    left: 80px;
+    width: 260px;
+   	height: 70px;
+    text-align: center;
+    position: inherit;
+	border-color: #cccccc;
+    z-index: 3;
+ }
+
+h1 {
+	color: white;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+h2 {
+	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+h3 {
+	color: #4aaaa5;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+.topnav {
+    position: absolute;
+    color: #f2f2f2;
+    padding: 30px 30px 30px 30px;
+	top: 10px;
+	right: 100px;
+    font-size: 22px;
+	background: #ffffff;
+}
+
+.topnav a {
+	color: #ccc;
+	font-family: 'Helvetica Neue';
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.topnav a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.body {
+	position: relative;
+	width: 100%;
+	height: 750px;
+	border-top: medium solid #dddddd;
+	background-image: url("../images/ep_naturalwhite.png");
+}
+
+.middle-wrapper {
+	width: 960px;
+	margin: 40px auto auto auto;
+}
+
+
+.content {
+	position: absolute;
+	background: #ffffff;
+	width: 650px;
+	color: #777777;
+	border: thin solid #dddddd;
+	padding: 10px 20px 20px 20px;
+
+}
+
+.content-text {
+	font-family: 'Helvetica Neue';
+	font-size: 18px;
+	line-height: 40px;
+
+}
+
+
+/*
+	top: 10px;
+	left: 50px;
+*/
+
+
+.sidebar {
+	position: absolute;
+	background: #ffffff;
+	width: 270px;
+	padding: 10px 20px 20px 20px;
+	margin-left: 730px;
+}
+
+/*
+	top: 0px;
+	right: 0px;
+*/
+
+
+img {
+	float: left;
+	margin: 0px 20px;
+}
+
+hr {
+	width: 100%;
+}
+
+
+/*
+.topnav a mouse-over{
+	
+}
+*/
+
+
+.bottom-teal-bar {
+	background: #4aaaa5;
+	width: 100%;
+	height: 10px;
+}
+
+.footer {
+	width: 100%;
+	height: 100px;
+	background: #666666;
+	color: #ffffff;
+	text-align: center;
+	line-height: 100px;
+
+}
+
+
+/*
+.box-relative { 
+	position: relative;
+	background: white;
+	width: 100%;
+	height: 80px;
+	float: left; 
+	overflow: hidden; 
+ }
+*/
+
+
+/*
+.container {
+
+  background: pink;
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+
+}
+*/
+/*   
+.row {
+	position: relative;
+	background: grey;
+	width: 650px;
+
+}
+*/
