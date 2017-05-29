@@ -154,7 +154,7 @@ function roundComplete() {
 			alert("You Won!"); 
 			startGame();
 
-		}, 10);
+		}, 100);
 
 	} 
 	//Check if user lost
