@@ -37,7 +37,7 @@
 
 <div class="panel panel-default text-center"> 
 	<div class="panel-body"> 
-		Letters Guessed: <span id="numGuesses"></span>
+		Letters Guessed: <span id="letterGuesses"></span>
 	</div>
 </div>
 
@@ -49,13 +49,13 @@
 
 <div class="panel panel-default text-center">
 	<div class="panel-body">
-	Guesses Left: <span id="numGuesses">9</span>
+	Guesses Left: <span id="numGuesses"></span>
 	</div>
 </div>
 
 <div class="panel panel-default text-center">
 	<div class="panel-body">
-	Win Counter: <span id="winCounter">0</span>
+	Win Counter: <span id="winCounter"></span>
 	</div>
 </div>
 
@@ -63,6 +63,18 @@
 	<div class="panel-body">
 	Loss Counter: <span id="lossCounter">0</span>
 	</div>
+</div>
+
+<div class="container"> 
+	<div class="row"> 
+		<div class="span6 offset3"> 
+			<form>
+				<p style="line-height: 70px; text-align: center;">
+				<button onclick="resetGame()" type="button" class="btn btn-outline-primary">
+				Reset for Fresh Steaku!</button></p>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- Link to JS is after the HTML so that JS loads 

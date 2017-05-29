@@ -11,7 +11,6 @@ var blanksAndSuccesses = [];  // W _ _ _ _
 var wrongLetters = []; 
 
 //Game Counters
-
 var winCount = 0; 
 var lossCount = 0; 
 var guessesLeft = 9; 
@@ -29,22 +28,31 @@ var guessesLeft = 9;
 //then have array of individual letters 
 
 function startGame () 
-{
+{	
 	selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
 	lettersinWord = selectedWord.split(""); 
 	numBlanks = lettersinWord.length; 
+	
+
+	// reinitialize variables
 	blanksAndSuccesses = []; //this is critical to flush out the blanksAndSuccesses
 	//need to flush out blanksAndSuccesses so that the spaces get reloaded 
 	//and we are not continuing the same game and pushing over the last one. 
+	letterGuessed = [];
+	wrongLetters = []; 
+	guessesLeft = 9;
 
-document.getElementById("wordToGuess").innerHTML = ""; 
-
+	// reinitialize view
 	for (var i = 0; i < numBlanks; i++) { 
-
 		blanksAndSuccesses.push("_"); 
-
 	}
 	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
+	document.getElementById("letterGuesses").innerHTML = letterGuessed.join(" ");
+	document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
+	document.getElementById("numGuesses").innerHTML = guessesLeft; 
+	document.getElementById("winCounter").innerHTML = winCount;
+	document.getElementById("lossCounter").innerHTML = lossCount;
+
 }
 
 
@@ -102,6 +110,7 @@ function checkLetters(letter) {
 		for (var i = 0; i < numBlanks; i++){
 			if (selectedWord [i] == letter) { 
 				blanksAndSuccesses[i] = letter; 
+				document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");   
 			}
 		}
 	}
@@ -112,7 +121,8 @@ function checkLetters(letter) {
 
 	else {
 		wrongLetters.push(letter); 
-		guessesLeft-- 
+		guessesLeft--; 
+		document.getElementById("numGuesses").innerHTML = guessesLeft; 
 	}
 
 
@@ -139,20 +149,27 @@ function roundComplete() {
 
 		//Update the win counter in HTML 
 		document.getElementById("winCounter").innerHTML = winCount; 
-		alert("You Won!"); 
 
-		startGame(); 
+		setTimeout(function(){ 
+			alert("You Won!"); 
+			startGame();
+
+		}, 10);
+
 	} 
 	//Check if user lost
 	else if(guessesLeft == 0) { 
 		lossCount++; 
 		alert("You Lost!"); 
-
 		//Update the HTML 
-		document.getElementById("Loss Counter").innerHTML = lossCount; 
+		document.getElementById("lossCounter").innerHTML = lossCount; 
 		startGame(); 
 	}
 
+}
+
+function resetGame() {
+	startGame();
 }
 
 //MAIN PROCESS (Call upon functions to make something happen)
@@ -161,12 +178,20 @@ startGame();
 	//Register Keyclicks
 
 document.onkeyup = function (event) { 
-	var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase(); 
-	checkLetters(letterGuessed); 
-	roundComplete();
+	var letterInput = String.fromCharCode(event.keyCode).toLowerCase(); 
 
-	//Testing / Debugging
+	if(letterInput.length === 1 && letterInput.match(/[a-z]/i)){
 
-	console.log(letterGuessed); 
+		// update value
+		letterGuessed.push(letterInput);
+		// update view
+		document.getElementById("letterGuesses").innerHTML = letterGuessed.join(" ");
+
+		checkLetters(letterInput); 
+		roundComplete();
+
+		//Testing / Debugging
+		console.log(letterGuessed); 
+	}
 }
 
