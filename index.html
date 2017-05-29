@@ -1,65 +1,78 @@
-<!DOCTYPE html> 
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Emmy | Home</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<meta charset="UTF-8"> 
+<title>Hangman Game</title>
 
+<!-- Link to JQuery -->
 
- 	<!-- Linking the Reset.css -->
-	<!-- <link rel="stylesheet" href="/assets/css/reset.css">  -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Bootstrap CDN -->
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 
 </head>
-
 <body>
 
-		<div class="header">
-			<div class="my-name">
-				<div class="my-h1">Emmy Emmy</div>
-			</div>
+<body background="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-steak-003.jpg">
+<div class="container" style="font-family:'Bad Script';"> 
 
-			<div class="topnav">
-			  <a href="index.html">About</a> | 
-			  <a href="portfolio.html">Portfolio</a> | 
-			  <a href="contact.html">Contact</a>
-			</div>
-			
-		</div>
-		
-		<div class="body">
-		
-		
-			<div class="middle-wrapper">
-				<div class="content">
-					<div class="aboutme-h2">About Me</div>
-					<hr>
-					
-					<div class="content-text">					
-						<p><img src="assets/images/nier.jpg" alt="Meow :)">Emmy Emmy is an aspiring Full Stack Developer from the Washington, D.C. metro area. Her interests include: web and application development, big data, software engineering, software testing, and legal hacking. </p>
-						<p>In her free time, Emmy enjoys mad science, studying (because this class is going to kick her butt), digital photography, video games, prop-building, eating steak, swimming, and sleeping.  </p>	
-					</div>
-				</div>
-					
-				<div class="sidebar">
-					<div class="my-h2">Connect with Me</div>
-					<hr>
-					<a href="https://github.com/masteremmy" target="_blank"><img src="assets/images/206-Github-48.png" alt="Github"></a>
-					<a href="https://www.linkedin.com/in/margaret-m-84b8b1115/" target="_blank"><img src="assets/images/linkedin-48.png" alt="LinkedIn"></a>
-					<a href="http://stackoverflow.com/users/7872576/emmy" target="_blank"><img src="assets/images/stackoverflow-48.png" alt="StackOverflow"></a>
-				</div>
-			
-			</div>
-			
-		</div>
-		
-		<div class="bottom-teal-bar"></div>
-		<footer class="footer">
-			&copy; Copyright 2017 Emmy Emmy
-		</footer>
-		
+	<div class="jumbotron bg-primary text-center" style="background-color: #FFC7CE;"> 
+		<h1>HangManSteaku</h1>
+		<p>Guess my favorite steak cut!</p> 
+	</div>
+
+<div class="panel panel-default" style="font-family:'Bad Script';">
+	<div class="panel-heading text-center" style="background-color: #FFC7CE;"> 
+		<h3 class="panel title" style="background-color: #FFC7CE;">Word to Guess</h3>
+</div>
+	<div class="panel-body text-center">
+		<h2 id="wordToGuess">_ _ _ _ _ _ _ </h2>
+	</div>
+</div>
+
+<div class="panel panel-default text-center"> 
+	<div class="panel-body"> 
+		Letters Guessed: <span id="numGuesses"></span>
+	</div>
+</div>
+
+<div class="panel panel-default text-center"> 
+	<div class="panel-body">
+	Wrong Guesses: <span id="wrongGuesses"></span>
+	</div>
+</div>
+
+<div class="panel panel-default text-center">
+	<div class="panel-body">
+	Guesses Left: <span id="numGuesses">9</span>
+	</div>
+</div>
+
+<div class="panel panel-default text-center">
+	<div class="panel-body">
+	Win Counter: <span id="winCounter">0</span>
+	</div>
+</div>
+
+<div class="panel panel-default text-center">
+	<div class="panel-body">
+	Loss Counter: <span id="lossCounter">0</span>
+	</div>
+</div>
+
+<!-- Link to JS is after the HTML so that JS loads 
+after the HTML has loaded -->
+
+
+<script src="logic.js"></script>
 
 </body>
 </html>
-				
+
+
+
