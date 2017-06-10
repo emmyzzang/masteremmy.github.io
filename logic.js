@@ -3,10 +3,10 @@ $(document).ready(function () {
 //GLOBAL VARIABLES: Delcaring the variables 
 //Declare the characters as an array of object literals 
 var characters = [
-	{name: 'Chewbacca', img: 'assets/chewy.jpg', hp: 100, ap: 20, ca: 20}, 
-	{name: 'Luke Skywalker', img: 'assets/luke.png', hp: 120, ap: 25, ca: 25},
-	{name: 'Darth Vader', img: 'assets/vader.jpg', hp: 150, ap: 15, ca: 15}, 
-	{name: 'Hoth Wampa', img: 'assets/wampa.jpg', hp: 180, ap: 10, ca: 10}, 
+	{name: 'Chewbacca', img: 'chewy.jpg', hp: 100, ap: 20, ca: 20}, 
+	{name: 'Luke Skywalker', img: 'luke.png', hp: 120, ap: 25, ca: 25},
+	{name: 'Darth Vader', img: 'vader.jpg', hp: 150, ap: 15, ca: 15}, 
+	{name: 'Hoth Wampa', img: 'wampa.jpg', hp: 180, ap: 10, ca: 10}, 
 ]; 
 var playerIsChosen = false; 
 var enemyIsChosen = false; 
